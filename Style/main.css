@@ -1,0 +1,746 @@
+
+.clr{clear: both;}
+p::selection{
+  background: yellow;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+.mobile{
+  display: none;
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+  background: red;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.mobile ul{
+  margin-top: 30%;
+}
+.mobile ul li{
+  padding: 10px;
+  background: yellow;
+  border-top: 1px solid grey;
+}
+header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #E1E1E1;
+  border-top: 1px solid #4CAF50;
+}
+header .leftSide{
+  width: 70%;
+  float: left;
+}
+header .leftSide .logo{
+    width: 30%;
+    text-align: center;
+    float: left;
+    color: #5F5F5F;
+    font-family: 'Russo One', sans-serif;
+    padding-left: 10px;
+	  padding-right: 10px;
+    line-height: 60px;
+    font-size: 2.5vw;
+    cursor: url(images/pencil.png), auto;
+}
+.leftSide .search{
+  width: 65%;
+  float: left;
+  text-align: left;
+  line-height: 60px;
+}
+.search input{
+  width: 90%;
+  margin-top: 16px;
+  float: left;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #E1E1E1;
+}
+.search input:active{
+  border: 1px solid #4CAF50;
+}
+.leftSide span{
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 4px;
+  padding-bottom: 1px;
+  margin-left: -35px;
+  border-radius: 3px;
+  border: 1px solid grey;
+}
+.leftSide span:hover{
+  color: silver;
+  cursor: pointer;
+  border: 1px solid silver;
+}
+.leftSide .mobile-menu{
+  display: none;
+}
+.rightSide{
+  width: 30%;
+  float: left;
+}
+.rightSide li{
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer;
+}
+.rightSide .write_story{
+    padding: 4px;
+    border-radius: 2px;
+    width: 120px;
+    padding: 8px;
+    float: left;
+    margin-top: 12px;
+    border: 1px solid grey;
+}
+
+.rightSide .login i, .rightSide .nesto1 i {
+    font-size: 1.7em;
+    color: #2E2D2D;
+}
+.rightSide .login{
+  margin-top: 10px;
+  margin-right: 25px;
+  float: right;
+}
+.rightSide .login p{
+    font-size: 1.1em;
+}
+.rightSide .nesto1{
+  margin-top: 11px;
+  margin-right: 30px;
+  float: right;
+}
+.rightSide p:hover{
+    border: 1px solid #4CAF50;
+    cursor: pointer;
+}
+
+.nav_categories{
+  width: 100%;
+  margin-top: 60px;
+  height: 50px;
+  line-height: 49px;
+  background: #4CAF50;
+  color: white;
+  border-bottom: 2px solid #E1E1E1;
+}
+.nav_categories .categories{
+  width: 50%;
+  float: left;
+  margin-left: 150px;
+  text-align: left;
+  color: #5F5F5F;
+  -webkit-transition: all ease 0.5s;
+	-moz-transition: all ease 0.5s;
+	transition: all ease 0.5s;
+}
+
+.nav_categories .categories li:hover{
+  color: black;
+  cursor: pointer;
+  border-bottom: 1px solid silver;
+}
+.nav_categories .buttons{
+  width: 20%;
+  text-align: right;
+  float: right;
+  margin-right: 10px;
+}
+.nav_categories .news{
+  width: 40px;
+  float: left;
+  padding-left: 9px;
+  padding-right: 9px;
+  margin-left: 10%;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+
+}
+.nav_categories ul li{
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  color: white;
+}
+#citat{
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  color: #5F5F5F;
+   font-size: 1.3em;
+}
+section{
+  width: 65%;
+  float: left;
+  margin-left: 50px;
+}
+.stories{
+  width: 90%;
+  height: auto;
+  margin: 20px 80px;
+  border: 1px solid grey;
+  border-radius: 6px;
+  background: white;
+
+}
+
+.stories .stories_header{
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #E1E1E1;
+}
+.stories .stories_header .rb{
+  float: left;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #5F5F5F;
+  line-height: 60px;
+}
+.stories .stories_header .datum{
+  float: right;
+  text-align: right;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #5F5F5F;
+  line-height: 60px;
+}
+.stories h1{
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1.6em;
+  color: #5F5F5F;
+
+}
+.stories p{
+  font-size: 1.1em;
+  text-align: center;
+  line-height: 160%;
+
+}
+.stories .prica{
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: left;
+  padding-top: 20px;
+  font-size: 1.3em;
+  padding-bottom: 20px;
+  font-family: arial;
+}
+.stories .stories_footer{
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #E1E1E1;
+}
+.stories .stories_footer ul{float:left; width:60%;list-style-type: none;}
+.stories .stories_footer ul li{
+  display: inline-block;
+  padding-top: 16px;
+  padding-left: 9px;
+  font-size: 1em;
+  color: #5F5F5F;
+}
+.stories .stories_footer ul li:hover{
+  color: black;
+  cursor: pointer;
+}
+.later {
+  margin-right: 20px;
+  padding-top: 13px;
+  width: 100px;
+  float: right;
+  font-size: 1.2em;
+  color: #5F5F5F;
+}
+.later i{
+  width: 4px;
+  margin-right: 30px;
+}
+.readMore{
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  padding: 4px;
+  text-align: center;
+  width: 80px;
+  float: right;
+  margin-right: 15px;
+  margin-top: 5px;
+  color: white;
+  background: #4CAF50;
+}
+.readMore p{
+  padding-top: -2px;
+}
+.readMore:hover{
+
+  background: white;
+  color: #4CAF50;
+  cursor: pointer;
+}
+.rightSection{
+  border: 1px solid grey;
+  width: 23%;
+  margin-right: 3%;
+  margin-top: 20px;
+  height: 600px;
+  background: white;
+  float: right;
+}
+footer{
+  width: 100%;
+  height: 60px;
+  background: white;
+  border-top: 1px solid #E1E1E1;
+  text-align: center;
+}
+/*  nevidljivo  */
+
+.login_hide{
+  width: 33%;
+  position: fixed;
+  top: 60px;
+  right: 33%;
+  height: 300px;
+  background: white;
+  border: 1px solid #5F5F5F;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.75);
+  display: none;
+}
+.login_input{
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.login_input input{
+  width: 100%;
+  margin-top: 5px;
+  padding: 4px;
+  border: 1px solid #5F5F5F;
+  border-radius: 2px;
+  text-align: center;
+
+}
+.login_hide i{
+  width: 100%;
+  margin-top: 40px;
+  padding-top: 10px;
+  color: green;
+  text-align: center;
+  font-size: 5.2em;
+  border-top: 1px solid grey;
+
+}
+.login_input p{
+  width: 100%;
+  margin: 4px auto;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #4CAF50;
+  background: #4CAF50;
+  border-radius: 2px;
+}
+.login_hide .poruka{
+  width: 30%;
+  float: left;
+  padding: 4px;
+  margin-left: 70px;
+  margin-top: 10px;
+  text-align: center;
+}
+.login_hide .register_button{
+  width: 32%;
+  float: left;
+  text-align: center;
+  padding: 4px;
+  margin-top: 10px;
+  background: #5F5F5F;
+  color: white;
+}
+.comment_hide, .share_hide{
+  width: 100%;
+  height: 200px;
+  background: #F1F1F1;
+  border-top: 1px solid #E1E1E1;
+  display: none;
+}
+.showMore{
+  height: 40px;
+  text-align: center;
+  width: 70%;
+  background: green;
+}
+.showLess{
+  height: 40px;
+  text-align: center;
+  width: 70%;
+  background: green;
+}
+
+ .krug{
+     width: 50px;
+     height: 50px;
+     -webkit-border-radius: 25px;
+     -moz-border-radius: 50%;
+     border-radius: 50%;
+     background: white;
+     padding: 120px;
+     float: left;
+     display: inline-block;
+      margin-left: 177px;
+      margin-top: 140px;
+     box-shadow: 3px 3px 3px 2px green;
+
+ }
+
+ .kruzic{
+     width: 25px;
+     height: 25px;
+     -webkit-border-radius: 25px;
+     -moz-border-radius: 50%;
+     border-radius: 50%;
+     background: white;
+     padding: 90px;
+     float: left;
+     margin-left: 160px;
+     display: inline-block;
+     margin-top: 190px;
+     box-shadow: 3px 3px 3px green;
+ }
+
+.intro{
+   width: 100%;
+    
+}
+
+
+
+
+
+ .kruzic2{
+     width: 25px;
+     height: 25px;
+     -webkit-border-radius: 25px;
+     -moz-border-radius: 50%;
+     border-radius: 50%;
+     background: white;
+     padding: 90px;
+     float: left;
+     display: inline-block;
+     margin-left: 165px;
+     margin-top: 190px;
+     box-shadow: 3px 3px 3px green;
+}
+
+
+.Polovina{
+    background-color: lightgray;
+    width: 100%;
+    height: 55vh;
+    z-index: -100;
+    position: absolute;
+    bottom: 0;
+}
+
+.blabla{
+    background-color: lightslategray;
+    width: 100%;
+    height: 100vh;
+    position:absolute;
+    top: 100vh;
+    left: 0;
+    
+}
+
+.clr{
+    clear: both;
+    position:absolute;
+    top: 100vh;
+}
+
+.blabla ul{
+    float: left;
+    list-style-type: none;
+    width: 100%;
+}
+.blabla ul li{
+    display: inline-block;
+    width:33%;
+    height: 580px;
+}
+
+.naslovi {
+    font-family: fantasy;
+    font-size:20px;
+    font-style: normal;
+    text-align: center;
+    margin-top: 14px;
+    color: green;
+    
+}
+
+.leviKvadrat{
+    width: 90%;
+    height: 480px;
+    background-color: gainsboro;
+    margin-left: 5%;
+    margin-top: 10%;
+    
+}
+
+.srednjiKvadrat{
+    width: 90%;
+    height: 480px;
+    background-color: gainsboro;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+.desniKvadrat{
+    width: 90%;
+    height: 480px;
+    background-color: gainsboro;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+.podaci{
+    
+    position: absolute;
+    z-index: 100;
+    margin-left: 6%;
+    margin-top: 2%;
+}
+
+.podaci p{
+    font-family: inherit;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+.MojePrice{
+    
+    position: absolute;
+    z-index: 100;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.MojePrice p{
+    font-family: inherit;
+    color: black;
+    font-size: 18px;
+    text-align: left;
+    letter-spacing: 2px;
+    
+}
+
+.MojePrice a{
+    text-decoration: none;
+    color: green;
+    margin-left: 10px;
+}
+
+.TudjePrice{
+    
+    position: absolute;
+    z-index: 100;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.TudjePrice p{
+    font-family:inherit;
+    color: black;
+    font-size: 18px;
+    text-align: left;
+    letter-spacing: 2px;
+    
+}
+
+.TudjePrice a{
+    text-decoration: none;
+    color: green;
+    margin-left: 10px;
+}
+
+/*..........................................................................................................
+..........................................................................................................
+..........................................................................................................*/
+/*POCETNA2 CSS za pocetna2.html*/
+
+.container1{
+    width: 100%;
+    height: 680px;
+    background-color:whitesmoke;
+}
+
+.cont1{
+    width:33.33%;
+    float: left;
+    margin-top: 150px;
+}
+.cont2{
+    width:33.33%;
+    float: left;
+     margin-top: 150px;
+}
+.cont3{
+    width:33.33%;
+    float: left;
+     margin-top: 150px;
+}
+
+.leftCircle{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: seashell;
+    float:left;
+    margin-top: 80px;
+    margin-left: 30%;
+    border-color: black;
+    
+    
+    
+    
+   
+    
+        
+}
+
+.middleCircle{
+    width:270px;
+    height: 270px;
+    border-radius: 50%;
+    background-color: seashell;
+    float:left;
+    margin-top: 55px;
+    margin-left: 20%;
+    
+  
+    
+}
+
+.rightCircle{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: seashell;
+    float:left;
+    margin-top: 80px;
+    margin-left: 30%;
+    border-color: black;
+   
+  
+}
+
+
+.container2{
+    background-color: #A1D490;
+    width: 100%;
+    height: 600px;
+}
+
+.leftsidebar{
+    float: left;
+    width: 33%;
+    height: 600px;
+    -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.30);
+    -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.75);
+}
+
+.middlesidebar{
+    float: left;
+    width: 33%;
+    height: 600px;
+    -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.30);
+    -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.75);
+}
+
+.rightsidebar{
+    float: left;
+    width: 33%;
+    height: 600px;
+}
+
+.leftsidebar h2{
+   text-align: center;
+    margin-top: 60px;
+    font-family: 'Russo One', sans-serif;
+    color: gray;
+}
+
+.middlesidebar h2{
+   text-align: center;
+    margin-top: 60px;
+    font-family: 'Russo One', sans-serif;
+    color: gray;
+}
+
+.rightsidebar h2{
+   text-align: center;
+    margin-top: 60px;
+    font-family: 'Russo One', sans-serif;
+    color: gray;
+}
+
+.showStory{
+    width: 100%;
+    height: 80%;
+}
+
+.bio{
+    width: 100%;
+    height: 80%;
+    
+}
+
+.liked{
+    width: 100%;
+    height: 80%;
+}
+
+. {
+   cursor: url(images/pencil.png), auto;
+}
+
+
+
+.smallPhoto{
+   border-radius: 50% 50%; 
+}
+
+.profilePhoto{
+    
+    border-radius: 50% 50%;
+}
+
+.nameButton{
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+    margin-top: 350px;
+    color: forestgreen;
+}
+

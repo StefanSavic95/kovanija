@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Napisite svoju pricu">
+  <meta name="keywords" content="">
+  <meta name="author" content="Nemanja Kovacevic , Milos Ciganovic">
+<!-- end of meta -->
+
+  <title>Ark of Stories</title>
+
+<!-- Stylesheet reference -->
+  <link href="https://fonts.googleapis.com/css?family=Righteous|Russo+One" rel="stylesheet">  <!-- google font-family -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">  <!-- awersome icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="Style/default.css">  <!-- default css -->
+  <link rel="stylesheet" type="text/css" href="Style/main.css">  <!-- regular stylesheet -->
+  <link rel="stylesheet" type="text/css" href="Style/mobile.css">  <!-- mobile version stylesheet -->
+<!-- end of stylesheet -->
+
+<!-- Script reference -->
+  <script src="Script/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="Script/app.js"></script>
+	<script src="Script/main.js"></script>
+<!-- end of script -->
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+  <!-- mobile verson for menu -->
+  <div class="mobile">
+    <ul class="categories">
+      <li>Mixed</li>
+      <li>Love</li>
+      <li>Drama</li>
+      <li>Fantasy</li>
+      <li>Horror</li>
+      <li>Comedy</li>
+      <li>Mythology</li>
+      <li>Mystery</li>
+      <li>Sci-fi</li>
+    </ul>
+  </div>
+
+  <!-- HEADER = logo, search, singu up -->
+  <header>
+    <div class="leftSide">
+      <div class="mobile-menu">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+      <div class="headerLogo">
+        <h1 class="logo">Ark of Stories</h1>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search" ng-model="test">
+        <span><i class="fa fa-search" aria-hidden="true"></i></span>
+      </div>
+    </div>
+    <div class="rightSide">
+      <ul>
+        <li class="write_story"><i class="fa fa-envira" aria-hidden="true"></i>Write story</li>
+        <li class="login"><i class="material-icons" style="font-size:2.4em">account_circle</i></li>
+      </ul>
+    </div>
+  </header>
+  <!--         <li class="nesto1"><i class="fa fa-info-circle" aria-hidden="true"></i><p> Info</p></li> -->
+  <!-- NAV = categories, sort, news..... -->
+  <nav class="nav_categories nav_bar">
+    <ul class="categories">
+      <li><a href="#/">Mixed</a></li>
+      <li><a href="#love">Love</a></li>
+      <li>Drama</li>
+      <li>Fantasy</li>
+      <li>Horror</li>
+      <li>Comedy</li>
+      <li>Mythology</li>
+      <li>Mystery</li>
+      <li>Sci-fi</li>
+    </ul>
+    <p class="news">News</p>
+    <ul class="buttons">
+      <li><i class="fa fa-sort" aria-hidden="true"></i></i> Sort</li>
+      <li><i class="fa fa-sort" aria-hidden="true"></i> Sort</li>
+      <li><i class="fa fa-sort" aria-hidden="true"></i> Sort</li>
+    </ul>
+  </nav>
+
+
+  <div id="citat">
+    <p><i>"ovde ide citat vezan <br> za tu vrstu price koji cemo naci negde" </i></p>
+  </div>
+
+  <section ng-view>
+    <div class="stories" ng-repeat="storie in stories | limitTo: limit | filter: test">
+      <div class="stories_header">
+        <p class="rb"><i>Author: {{storie.author}}</i></p>
+        <p class="datum"><i>{{storie.datum}}</i></p>
+      </div>
+      <h1>{{storie.naslov}}</h1>
+      <p><i>({{storie.vrsta}})</i></p>
+      <p class="prica">{{storie.prica}}</p>
+      <div class="stories_footer">
+        <ul>
+          <li><i class="fa fa-heart-o" aria-hidden="true"></i> Like(10)</li>
+          <li class="comment"><i class="fa fa-commenting-o" aria-hidden="true"></i> Comment(3)</li>
+          <li><i class="fa fa-share-alt" aria-hidden="true"></i> Share</li>
+        </ul>
+        <p class="readMore" >Read more</p>
+        <p class="later"><i class="material-icons">watch_later</i>read later</p>
+
+        </div>
+        <div class="comment_hide">
+          <h3>comment</h3>
+        </div>
+
+      </div>
+      <p class="showMore" ng-click="incrementLimit()">More</p>
+      <p class="showLess" ng-click="decrementLimit()">Less</p>
+
+  </section>
+
+  <section class="rightSection"><h3>NASLOV</h3></section>
+
+  <div class="login_hide">
+    <i class="fa fa-user" aria-hidden="true"></i>
+    <div class="login_input">
+      <input type="text" placeholder="Email" class="mail">
+      <input type="password" placeholder="Password">
+      <p>login</p>
+    </div>
+    <p class="poruka">Don't have acc?</p>
+    <p class="register_button">Register</p>
+  </div>
+
+</body>
+</html>

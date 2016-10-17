@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Napisite svoju pricu">
+  <meta name="keywords" content="">
+  <meta name="author" content="Nemanja Kovacevic , Milos Ciganovic">
+<!-- end of meta -->
+
+  <title>Profile - Ark of Stories</title>
+
+<!-- Stylesheet reference -->
+  <link href="https://fonts.googleapis.com/css?family=Righteous|Russo+One" rel="stylesheet">  <!-- google font-family -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">  <!-- awersome icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="Style/default.css">  <!-- default css -->
+  <link rel="stylesheet" type="text/css" href="Style/main.css">  <!-- regular stylesheet -->
+  <link rel="stylesheet" type="text/css" href="Style/mobile.css">  <!-- mobile version stylesheet -->
+<!-- end of stylesheet -->
+
+<!-- Script reference -->
+  <script src="Script/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="Script/app.js"></script>
+	<script src="Script/main.js"></script>
+<!-- end of script -->
+</head>
+
+<body class="body" ng-app="myApp" ng-controller="myCtrl">
+    <header>
+    <div class="leftSide">
+      <div class="mobile-menu">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+      <div class="headerLogo">
+        <h1 class="logo">Ark of Stories</h1>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search" ng-model="test">
+        <span><i class="fa fa-search" aria-hidden="true"></i></span>
+      </div>
+    </div>
+    <div class="rightSide">
+      <ul>
+        <li class="write_story"><i class="fa fa-envira" aria-hidden="true"></i>Write story</li>
+        <li class="login"><i class="material-icons" style="font-size:2.4em">account_circle</i></li>
+      </ul>
+    </div>
+  </header>
+  
+ 
+<div class="container1"><!--start firs section with circles-->
+    <div class="cont1"><!--div for left circle 33%-->
+        <button id="myButton" class="leftCircle" onclick="window.location.href='#datas'">
+            <img class="smallPhoto" src="images/icon.png" alt="like" height="200" width="200"></img>
+        </button><!--button for left circle-->
+        <p class="nameButton">Your Stories</p>
+    </div>
+    <div class="cont2"><!--div for middle circle 33%-->
+       
+        <button class="middleCircle" onclick="window.location.href='#datas'">
+            <img class="profilePhoto" src="images/profile.jpg" alt="Smiley face" height="270" width="270">
+        </button><!--button for middle circle-->
+        <p class="nameButton">Bio</p>
+    </div>
+    <div class="cont3"><!--div for right circle 33%-->
+        <button class="rightCircle" onclick="window.location.href='#datas'">
+            <img class="smallPhoto" src="images/liked.png" alt="like" height="200" width="200"></img>
+        </button><!--button for right circle-->
+        <p class="nameButton">Liked stories</p>
+    </div>
+    
+</div><!--end section with circles-->
+   
+     
+     
+     
+     <div id="datas" class="container2"><!--start second section with 3 coloumns -->
+         <div class="leftsidebar"><!--div for left sidebar-->
+             <h2>Stories</h2>
+             <div class="showStory"></div><!--div show stories from the base with php script and you can see them from inspect element-->
+         </div>
+         <div class="middlesidebar"><!--div for middle sidebar-->
+             <h2>About</h2>
+             <div class="bio"></div><!--div shows credentials of user and you can see that from inspect element only-->
+         </div>
+         <div class="rightsidebar"><!--div for right sidebar-->
+             <h2>liked</h2>
+             <div class="liked"></div><!--div shows liked stories from data base and you can see them from inspect element-->
+         </div>
+     </div><!--end of second section -->
+     
+    <script>
+    // This is a functions that scrolls to #{blah}link
+function goToByScroll(id){
+      // Remove "link" from the ID
+    id = id.replace("myButton", "");
+      // Scroll
+    $('html,body').animate({
+        scrollTop: $("#datas"+id).offset().top},
+        'slow');
+}
+    </script> 
+     
+     
+
+     
+     
+     
+  
+</body>
+</body>
+</html>
